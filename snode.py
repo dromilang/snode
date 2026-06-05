@@ -40,5 +40,6 @@ while True:
             print("   " + comando)
             print("Messaggio Errore:")
             print("    " + str(e))
+            print(ripristina())
         else:
             print(risultato)
