@@ -12,16 +12,16 @@ def setcolor(color):
 def ripristina():
     return Style.RESET_ALL
 
-file = sys.argv[2]
+file = sys.argv[1]
 
-with open("r", Path(file), encoding
+with open(Path(file), "r", encoding="utf-8") as f:
+    filec = f.read()
 
-        
 try:
     risultato = js2py.eval_js(filec)
 except Exception as e:
     print(setcolor("RED") + "Errore nell'esecuzione di:" + ripristina())
-    print("   " + comando)
+    print("   " + file)
     print("Messaggio Errore:")
     print("    " + str(e))
     print(ripristina())
