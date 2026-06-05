@@ -1,1 +1,3 @@
 # Inserisci gli URL in cui SPM può scaricare files.
+# esempio:
+# nomepacchetto=https://index.mpdulo.com/nomepacchetto.zip
