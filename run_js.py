@@ -14,7 +14,7 @@ def ripristina():
 
 file = sys.argv[2]
 
-with open("r", )
+with open("r", Path(file), encoding
 
         
 try:
