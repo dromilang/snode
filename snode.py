@@ -12,6 +12,7 @@ def ripristina():
     return Style.RESET_ALL
 
 context = js2py.EvalJs({})
+context.require = require
 
 while True:
     comando = input("> ")
