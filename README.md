@@ -128,6 +128,10 @@ La funzione `require()` integrata permette di includere moduli:
 Ciao mondo!
 >var tzdata = require("simple_tzdata")
 >tzdata.europeRome()
+{-9223372036854775808 2996 0 LMT}
+{-3252098996 2996 0 RMT}
+{-2403565200 3600 0 CET}
+{-1690765200 7200 1 CEST}
     --snip--
 ```
 
