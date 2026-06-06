@@ -2,6 +2,7 @@ from colorama import Fore, Style, init
 import js2py
 import sys
 from pathlib import Path
+from require import require
 
 init()
 
