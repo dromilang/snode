@@ -82,3 +82,52 @@ qui potrai digitate i comandi JS:
 > console.log("Ciao mondo Snode!")
 Ciao mondo Snode!
 ```
+
+Comunque potrete incappare in errori:
+
+```shellOutput
+>console.log(ciao)
+Errore nell'esecuzione di:
+    console.log(ciao)
+Messaggio dell'errore:
+    The variable 'ciao' is not defined
+>
+```
+
+---
+
+## SPM
+
+SPM è il gestore di Pacchetti di Snode. Per scaricare un pacchetto, dovrete aggiungere degli url nel file `trusted_indexes.txt`. Il formato è:
+
+```text
+nomepacchetto=zips.esempio.it/url/zip/pacchetto/nomepacchetto.zip
+```
+
+Una volta fatto, provate a fare:
+
+```bash
+python spm.py install nomepacchetto -g
+```
+
+- `python` - Python
+- `spm.py` - Il file di SPM
+- `install` - per installare
+- `nomepacchetto` - il nome del pacchetto
+- `-g` lo installa globalmente, non per il progetto
+
+---
+
+## Require
+
+La funzione `require()` integrata permette di includere moduli:
+
+```shellOutput
+>var hello_world = require("__snode_hello__")
+>hello_world
+Ciao mondo!
+>var tzdata = require("simple_tzdata")
+>tzdata.europeRome()
+    --snip--
+```
+
