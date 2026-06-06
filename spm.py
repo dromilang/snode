@@ -38,7 +38,7 @@ def install(package, global_install=False):
         zip_data = zipfile.ZipFile(BytesIO(response.content))
 
         if global_install:
-            base_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), MODULES_DIR
+            base_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), MODULES_DIR)
         else:
             base_path = os.path.join(os.getcwd(), MODULES_DIR)
 
