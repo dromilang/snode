@@ -131,3 +131,13 @@ Ciao mondo!
     --snip--
 ```
 
+---
+
+# Note e Credits
+
+Snode è un progetto in fase **Alpha**, quindi:
+- può contenere bug
+- alcune funzioni possono cambiare
+- è ancora sperimentale
+
+Snode è creato con Python, Js2Py, colorama e tanta sperimentazione.
