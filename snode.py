@@ -11,6 +11,9 @@ def setcolor(color):
 def ripristina():
     return Style.RESET_ALL
 
+print("Snode 1.0.0 Alpha 0")
+print("digita .help per più informazioni.")
+
 context = js2py.EvalJs({})
 context.require = require
 
