@@ -37,13 +37,17 @@ while True:
     else:
         try:
             risultato = context.eval(comando)
-            print(risultato)
+
+            if risultato is not None:
+                print(risultato)
+
         except Exception:
             try:
-               context.execute(comando)
-        except Exception as e:
-               print(setcolor("RED") + "Errore nell'esecuzione di:" + ripristina())
-               print("   " + comando)
-               print("Messaggio Errore:")
-               print("    " + str(e))
-               print(ripristina())
+                context.execute(comando)
+
+            except Exception as e:
+                print(setcolor("RED") + "Errore nell'esecuzione di:" + ripristina())
+                print("   " + comando)
+                print("Messaggio Errore:")
+                print("    " + str(e))
+                print(ripristina())
