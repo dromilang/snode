@@ -36,7 +36,7 @@ while True:
 
     else:
         try:
-            risultato = js2py.eval_js(comando)
+            risultato = context.execute(comando)
         except Exception as e:
             print(setcolor("RED") + "Errore nell'esecuzione di:" + ripristina())
             print("   " + comando)
@@ -44,4 +44,4 @@ while True:
             print("    " + str(e))
             print(ripristina())
         else:
-            context.execute(comando)
+            print(risultato)
