@@ -10,6 +10,8 @@ def setcolor(color):
 def ripristina():
     return Style.RESET_ALL
 
+context = js2py.EvalJs({})
+
 while True:
     comando = input("> ")
 
@@ -42,4 +44,4 @@ while True:
             print("    " + str(e))
             print(ripristina())
         else:
-            print(risultato)
+            context.execute(comando)
