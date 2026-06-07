@@ -1,0 +1,88 @@
+name: Bug Report
+description: Segnala un bug in Snode
+title: "[Bug]: "
+labels:
+  - bug
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Grazie per aver segnalato un bug in Snode!
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Descrizione del bug
+      description: Spiega chiaramente cosa non funziona.
+      placeholder: Quando faccio X succede Y...
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Passaggi per riprodurre il problema
+      description: Come possiamo riprodurre il bug?
+      placeholder: |
+        1. Vai a ...
+        2. Clicca su ...
+        3. Osserva l'errore ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Comportamento atteso
+      description: Cosa avrebbe dovuto succedere?
+      placeholder: Mi aspettavo che...
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Comportamento effettivo
+      description: Cosa è successo invece?
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Versione di Snode
+      placeholder: "es. 1.0, 26.0.0"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: Sistema operativo
+      options:
+        - Windows
+        - Linux
+        - macOS
+        - Android
+        - iOS
+        - Altro
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Log o screenshot
+      description: Incolla eventuali errori, stack trace o screenshot.
+      render: shell
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Controlli
+      options:
+        - label: Ho verificato che il bug non sia già stato segnalato.
+          required: true
+        - label: Sto usando una versione supportata di Snode.
+          required: true
