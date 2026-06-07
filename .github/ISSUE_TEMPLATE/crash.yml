@@ -1,0 +1,72 @@
+name: Crash Report
+description: Segnala un arresto anomalo (crash) di Snode
+title: "[Crash]: "
+labels:
+  - bug
+  - crash
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Grazie per aver segnalato un crash di Snode.
+
+  - type: input
+    id: version
+    attributes:
+      label: Versione di Snode
+      placeholder: "es. 1.0, 26.0.0"
+    validations:
+      required: true
+
+  - type: textarea
+    id: action
+    attributes:
+      label: Cosa stavi facendo?
+      description: Descrivi l'azione che ha causato il crash.
+      placeholder: Stavo aprendo...
+    validations:
+      required: true
+
+  - type: textarea
+    id: result
+    attributes:
+      label: Cosa è successo?
+      placeholder: L'app si è chiusa improvvisamente...
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Log / Stack Trace
+      description: Incolla qui eventuali log o messaggi di errore.
+      render: text
+
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: Screenshot
+      description: Trascina qui eventuali screenshot.
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: Sistema operativo
+      options:
+        - Windows
+        - Linux
+        - macOS
+        - Android
+        - iOS
+        - Altro
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Conferma
+      options:
+        - label: Ho verificato che il problema non sia già stato segnalato.
+          required: true
