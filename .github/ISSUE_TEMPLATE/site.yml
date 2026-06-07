@@ -1,0 +1,69 @@
+name: Problema sito / documentazione
+description: Segnala problemi o miglioramenti del sito o della documentazione di Snode
+title: "[Sito/Docs] "
+labels:
+  - documentation
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Grazie per il tuo feedback su Snode 🌐📘
+
+        Usa questo modulo per segnalare problemi o miglioramenti riguardanti:
+        - sito web
+        - documentazione
+        - pagine mancanti o poco chiare
+        - bug visivi o di contenuto
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: 🔍 Tipo di problema
+      options:
+        - Sito web (UI / grafica)
+        - Documentazione (contenuti)
+        - Link non funzionante
+        - Pagina mancante
+        - Altro
+    validations:
+      required: true
+
+  - type: input
+    id: page
+    attributes:
+      label: 📄 Pagina interessata
+      description: Inserisci il link o la sezione
+      placeholder: es. /installazione oppure homepage
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: ❌ Problema riscontrato
+      description: Cosa non funziona o non è chiaro?
+      placeholder: La pagina è confusa / il layout è rotto / manca info...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 💡 Miglioramento suggerito
+      description: Come dovrebbe essere migliorato?
+      placeholder: Sarebbe meglio se...
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: 📎 Informazioni aggiuntive
+      description: Screenshot, idee o dettagli utili
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: ✔️ Controlli
+      options:
+        - label: Ho controllato che il problema non sia già stato segnalato
+          required: true
+        - label: Questo riguarda Snode (sito o documentazione)
+          required: true
