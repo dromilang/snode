@@ -1,0 +1,54 @@
+name: Feature Request
+description: Suggerisci una nuova funzionalità per Snode
+title: "[Feature]: "
+labels:
+
+- enhancement
+
+body:
+
+- type: markdown
+  attributes:
+  value: |
+  Grazie per aver proposto una nuova funzionalità per Snode!
+
+- type: textarea
+  id: problem
+  attributes:
+  label: Problema da risolvere
+  description: Quale problema o esigenza hai?
+  placeholder: Attualmente non è possibile...
+  validations:
+  required: true
+
+- type: textarea
+  id: solution
+  attributes:
+  label: Soluzione proposta
+  description: Come dovrebbe funzionare questa funzionalità?
+  placeholder: Sarebbe utile aggiungere...
+  validations:
+  required: true
+
+- type: textarea
+  id: alternatives
+  attributes:
+  label: Alternative considerate
+  description: Hai valutato altre soluzioni?
+  placeholder: Potrei usare..., ma...
+
+- type: textarea
+  id: additional
+  attributes:
+  label: Informazioni aggiuntive
+  description: Screenshot, mockup, esempi o altre informazioni utili.
+
+- type: checkboxes
+  id: checks
+  attributes:
+  label: Conferma
+  options:
+  - label: Ho verificato che questa funzionalità non sia già stata richiesta.
+  required: true
+  - label: Questa richiesta riguarda Snode e non un software esterno.
+  required: true
