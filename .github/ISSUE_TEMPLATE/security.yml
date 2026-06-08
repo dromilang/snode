@@ -1,0 +1,98 @@
+name: Security Report
+description: Segnala una vulnerabilità o un problema di sicurezza in Snode.
+title: "[SECURITY] "
+labels:
+  - security
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Grazie per aver segnalato un problema di sicurezza.
+
+        ⚠️ Non pubblicare informazioni sensibili come password, token,
+        chiavi API o dati personali.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Descrizione del problema
+      description: Descrivi la vulnerabilità trovata.
+      placeholder: Descrivi il problema...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Gravità stimata
+      options:
+        - Bassa
+        - Media
+        - Alta
+        - Critica
+    validations:
+      required: true
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impatto
+      description: Cosa può fare un attaccante sfruttando questa vulnerabilità?
+      placeholder: Accesso non autorizzato, esecuzione di codice...
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Passaggi per riprodurre il problema
+      description: Elenca i passaggi necessari.
+      placeholder: |
+        1. ...
+        2. ...
+        3. ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: poc
+    attributes:
+      label: Proof of Concept (opzionale)
+      description: Codice o esempio che dimostra il problema.
+      render: text
+
+  - type: input
+    id: version
+    attributes:
+      label: Versione di Snode
+      placeholder: "1.0.0 Alpha 1"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: installation
+    attributes:
+      label: Metodo di installazione
+      options:
+        - Sorgente Python
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Ambiente
+      description: Sistema operativo, Python, ecc.
+      placeholder: |
+        OS: Windows 11
+        Python: 3.11.9
+        Snode: 1.0.0 Alpha 1
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: Ho verificato che il problema non sia già stato segnalato.
+          required: true
+        - label: Ho fornito informazioni sufficienti per analizzare il problema.
+          required: true
