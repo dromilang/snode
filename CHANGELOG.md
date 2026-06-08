@@ -1,7 +1,1 @@
-# Changelog
-
-<details>
-  <summary>1.0.x</summary>
-
-  - **1.0.0 Alpha 0** - Prima versione
-</details>
+Il changelog è disponibile nella [documentazione](https://snode-docs.readthedocs.io/it/latest/news.html).
