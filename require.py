@@ -16,6 +16,7 @@ def _get_local_modules_dir():
 
 
 def require(name):
+    name = str(name).strip().strip("'").strip('"')
     """
     require() per Snode con supporto locale + globale
     """
